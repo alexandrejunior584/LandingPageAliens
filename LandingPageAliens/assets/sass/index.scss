@@ -1,0 +1,313 @@
+body{
+    @import url('https://fonts.googleapis.com/css2? family= Telex & display=swap');
+    margin: 0;
+    padding: 0;
+    font-family: 'Telex', sans-serif;
+    $cor-primaria: #fff;
+    $cor-secundaria: #0dc55a;
+    $cor-terciaria: #0da74d;
+    %container{
+        width: 80%;
+        margin: auto;
+    }
+
+    nav{
+        @extend %container;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+
+        img{
+            max-width: 40px;
+        }
+
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+
+            li{
+                margin: 0 10px;
+                
+                a{
+                    text-decoration: none;
+                    color: $cor-secundaria;
+
+                    &:hover{
+                        color: $cor-terciaria;
+                    }
+                }
+            }
+        }
+    }
+
+    .jumb{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @extend %container;
+        margin-top: 50px;
+
+        h2{
+            font-size: 4em;
+            padding: 0;
+            margin: 0;
+
+            span{
+                color: $cor-secundaria;
+            }
+        }
+
+        button{
+            padding: 10px 20px;
+            color: $cor-primaria;
+            background-color: $cor-secundaria;
+            font-size: 17px;
+            border: none;
+            border-radius: 20px;
+            margin-top: 20px;
+            cursor: pointer;
+
+            &:hover{
+                background-color: $cor-terciaria;
+            }
+        }
+
+        img{
+            max-width: 480px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    #about{
+        margin-top: 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @extend %container;
+
+        img{
+            max-width: 600px;
+        }
+
+        h2{
+            margin: 0;
+            padding: 0;
+            font-size: 2em;
+        }
+
+        button{
+            padding: 10px 20px;
+            color: $cor-primaria;
+            background-color: $cor-secundaria;
+            font-size: 17px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+
+            &:hover{
+                background-color: $cor-terciaria;
+            }
+        }
+    }
+
+    #shelters{
+        margin-top: 120px;
+        @extend %container;
+
+        .shelters-cards{
+            display: flex;
+            justify-content: space-between;
+
+            .card{
+                padding: 20px;
+                background-color: $cor-primaria;
+                border-radius: 10px;
+                margin: 0 5px;
+                text-align: center;
+                -webkit-box-shadow: 0px 10px 13px -7px #eee, 4px 10px 14px 1px rgba(0,0,0,0.32); 
+                box-shadow: 0px 10px 13px -7px #eee, 4px 10px 14px 1px rgba(0,0,0,0.32);
+                cursor: pointer;
+
+                &:hover{
+                    transform: translateY(-5%);
+                    transition: 1s;
+                }
+
+                a{
+                    text-decoration: none;
+                    color: #212121;
+                    font-size: 17px;
+
+                    &:hover{
+                        border-bottom: solid 1px #212121;
+                    }
+                }
+            }
+
+            br{
+                display: none;
+            }
+
+            .card-2{
+                background-color: $cor-secundaria;
+                color: $cor-primaria;
+                
+                a{
+                    color: $cor-primaria;
+
+                    &:hover{
+                        border-bottom: solid 1px $cor-primaria;
+                    }
+                }
+            }
+        }
+    }
+
+    #types{
+        margin-top: 150px;
+        @extend %container;
+
+        h2{
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        .types-cards{
+            @extend %container;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            img{
+                max-width: 320px;
+            }
+
+            h3{
+                text-align: center;
+            }
+
+            div{
+                padding: 20px;
+                background-color: $cor-primaria;
+                border-radius: 10px;
+                -webkit-box-shadow: 0px 10px 13px -7px #eee, 4px 10px 14px 1px rgba(0,0,0,0.32); 
+                box-shadow: 0px 10px 13px -7px #eee, 4px 10px 14px 1px rgba(0,0,0,0.32);
+                cursor: pointer;
+            }
+        }
+    }
+
+    footer{
+        text-align: center;
+        padding: 20px;
+        color: $cor-secundaria;
+        border-top: $cor-secundaria 2px solid;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 900px){
+    #jumb {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: -30px;
+
+        h2{
+            font-size: 2em;
+        }
+
+        button {
+            padding: 8px 18px;
+            color: #fff;
+            background-color: #0dc55a;
+            font-size: 17px;
+            border: none;
+            border-radius: 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            margin-bottom: 50px;
+        }
+
+        img{
+            max-width: 300px;
+        }
+    }
+
+    section#about {
+        margin-top: 120px;
+        display: block;
+        /* justify-content: space-between; */
+        /* align-items: center; */
+        
+
+        button {
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #0dc55a;
+            font-size: 17px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        img{
+            display: none;
+        }
+    }
+    
+    #shelters {
+        div{
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-between; */
+
+            div.card {
+                padding: 10px;
+                background-color: #fff;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            br{
+                display: block;
+            }
+        }
+    }
+
+    body #shelters .shelters-cards .card-2 {
+        background-color: #0dc55a;
+        color: #fff;
+        margin: 22px 0;
+    }
+
+    body #types .types-cards {
+        display: block;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    body #types .types-cards div {
+        padding: 20px;
+        margin: 22px 0;
+    }
+
+    .br{
+        display: none;
+    }
+
+    body nav ul {
+        display: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        /* display: flex; */
+        justify-content: flex-start;
+    }
+}
